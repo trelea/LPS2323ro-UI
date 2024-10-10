@@ -14,6 +14,7 @@ const insertCarDetails = (car) => {
               <button type="button"
                   class="bg-sky-700 p-2 px-6 text-white text-xl font-medium rounded-xl shadow-2xl hover:bg-sky-500">Update</button>
               <button type="button"
+                  id="delete"
                   class="bg-red-700 p-2 px-6 text-white text-xl font-medium rounded-xl shadow-2xl hover:bg-red-500">Delete</button>
           </div>
           <ul class="flex flex-col gap-4">
