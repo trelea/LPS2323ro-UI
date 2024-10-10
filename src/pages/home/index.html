@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../utils/index.js" defer></script>
+  <script src="../../utils/getCars.js" defer type="module"></script>
+  <script src="../../utils/postCar.js" defer type="module"></script>
+  <title>Home</title>
+</head>
+
+<body>
+  <main>
+    <nav class="flex justify-between items-center bg-sky-600 px-60 py-6">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-car text-white size-16">
+        <path
+          d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+        <circle cx="7" cy="17" r="2" />
+        <path d="M9 17h6" />
+        <circle cx="17" cy="17" r="2" />
+      </svg>
+      <button type="button"
+        class="bg-sky-900 px-10 py-2 rounded-xl shadow-2xl shadow-white text-white font-bold text-xl text-center"
+        __open__modal>Create Car</button>
+    </nav>
+
+    <section class="px-60 py-10">
+      <div class="grid grid-cols-4 justify-center items-center gap-6" cards_container>
+      </div>
+    </section>
+
+    <section class="hidden fixed h-screen w-screen bg-black bg-opacity-50 top-0 left-0 justify-center items-center"
+      __modal>
+      <div class="p-10 bg-slate-200 rounded-xl border border-neutral-950/75">
+        <div class="flex justify-end">
+          <div class="rounded-full hover:bg-neutral-400 p-2" __close__modal>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-x">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </div>
+        </div>
+
+        <form action="" class="w-[800px] flex flex-col gap-10" id="form">
+
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-neutral-700 font-normal text-xl">Imagine</label>
+            <input type="file" name="thumbnail" class="text-sm text-stone-500
+                                      file:mr-5 file:py-1 file:px-3 file:border-[1px]
+                                      file:text-xs file:font-medium
+                                      file:bg-stone-50 file:text-stone-700
+                                      hover:file:cursor-pointer hover:file:bg-blue-50
+                                      hover:file:text-blue-700" required>
+          </div>
+
+
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-neutral-700 font-normal text-xl">Marca</label>
+            <input type="text" name="mark"
+              class="py-2 px-4 rounded-lg bg-transparent border border-neutral-500 outline-none text-2xl font-normal"
+              placeholder="Marca..." required>
+          </div>
+
+
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-neutral-700 font-normal text-xl">Model</label>
+            <input type="text" name="model"
+              class="py-2 px-4 rounded-lg bg-transparent border border-neutral-500 outline-none text-2xl font-normal"
+              placeholder="Model..." required>
+          </div>
+
+
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-neutral-700 font-normal text-xl">Anul Producerii</label>
+            <input type="number" name="year"
+              class="py-2 px-4 rounded-lg bg-transparent border border-neutral-500 outline-none text-2xl font-normal"
+              placeholder="Anul Producerii..." required>
+          </div>
+
+
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-neutral-700 font-normal text-xl">Capacitate
+              Cilindrica</label>
+            <input type="number" name="engine_capacity"
+              class="py-2 px-4 rounded-lg bg-transparent border border-neutral-500 outline-none text-2xl font-normal"
+              placeholder="Capacitate Cilindrica..." required>
+          </div>
+
+
+          <div class="w-full bg-sky-600 rounded-lg border border-sky-900 shadow-2xl">
+            <button type="submit" class="w-full p-2 text-2xl font-semibold text-white">Creaza</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
