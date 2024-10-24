@@ -1,3 +1,5 @@
+import { setValues } from "./updateCar.js";
+
 const insertCarDetails = (car) => {
   const section = document.querySelector("[__car_details]");
   section.innerHTML = `
@@ -12,6 +14,7 @@ const insertCarDetails = (car) => {
       <div class="flex-1">
           <div class="flex gap-4 justify-end">
               <button type="button"
+                  __open__modal__update
                   class="bg-sky-700 p-2 px-6 text-white text-xl font-medium rounded-xl shadow-2xl hover:bg-sky-500">Update</button>
               <button type="button"
                   id="delete"
@@ -39,5 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetch(`http://localhost:3333/cars/${id}`)
     .then((res) => res.json())
-    .then((data) => insertCarDetails(data.vehicle));
+    .then((data) => {
+      insertCarDetails(data.vehicle);
+      setValues(data.vehicle);
+    });
 });

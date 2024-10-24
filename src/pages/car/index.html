@@ -96,8 +96,77 @@
         </form>
       </div>
     </section>
+
+
+    <!-- UPDATE MODAL -->
+    <section class="hidden fixed h-screen w-screen bg-black bg-opacity-50 top-0 left-0 justify-center items-center"
+      __modal__update>
+      <div class="p-10 bg-slate-200 rounded-xl border border-neutral-950/75">
+        <div class="flex justify-end">
+          <div class="rounded-full hover:bg-neutral-400 p-2" __close__modal__update>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-x">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </div>
+        </div>
+
+        <form action="" class="w-[800px] flex flex-col gap-10" id="form__update">
+          <h1>Update modal</h1>
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-neutral-700 font-normal text-xl">Imagine</label>
+            <input type="file" name="thumbnail" class="text-sm text-stone-500
+                                          file:mr-5 file:py-1 file:px-3 file:border-[1px]
+                                          file:text-xs file:font-medium
+                                          file:bg-stone-50 file:text-stone-700
+                                          hover:file:cursor-pointer hover:file:bg-blue-50
+                                          hover:file:text-blue-700">
+          </div>
+
+
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-neutral-700 font-normal text-xl">Marca</label>
+            <input type="text" name="mark" id="_mark_update"
+              class="py-2 px-4 rounded-lg bg-transparent border border-neutral-500 outline-none text-2xl font-normal"
+              placeholder="Marca...">
+          </div>
+
+
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-neutral-700 font-normal text-xl">Model</label>
+            <input type="text" name="model" id="_model_update"
+              class="py-2 px-4 rounded-lg bg-transparent border border-neutral-500 outline-none text-2xl font-normal"
+              placeholder="Model...">
+          </div>
+
+
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-neutral-700 font-normal text-xl">Anul Producerii</label>
+            <input type="number" name="year" id="_year_update"
+              class="py-2 px-4 rounded-lg bg-transparent border border-neutral-500 outline-none text-2xl font-normal"
+              placeholder="Anul Producerii...">
+          </div>
+
+
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-neutral-700 font-normal text-xl">Capacitate
+              Cilindrica</label>
+            <input type="number" name="engine_capacity" id="_engine_capacity_update"
+              class="py-2 px-4 rounded-lg bg-transparent border border-neutral-500 outline-none text-2xl font-normal"
+              placeholder="Capacitate Cilindrica...">
+          </div>
+
+          <div class="w-full bg-sky-600 rounded-lg border border-sky-900 shadow-2xl">
+            <button type="submit" class="w-full p-2 text-2xl font-semibold text-white">Update</button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
   <script src="../../utils/deleteCar.js" type="module"></script>
+  <script src="../../utils/updateCar.js" type="module"></script>
 </body>
 
 </html>
